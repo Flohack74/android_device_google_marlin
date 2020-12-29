@@ -432,7 +432,6 @@ PRODUCT_PACKAGES += \
 # Use the A/B updater.
 AB_OTA_UPDATER := true
 PRODUCT_PACKAGES += \
-    update_engine \
     update_verifier
 
 # Enable update engine sideloading by including the static version of the
@@ -442,8 +441,6 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     libgptutils \
     libz \
     libcutils
-PRODUCT_PACKAGES += \
-    update_engine_sideload
 
 # Tell the system to enable copying odexes from other partition.
 PRODUCT_PACKAGES += \
@@ -455,9 +452,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Script that copies preloads directory from system_other to data partition
 PRODUCT_COPY_FILES += \
     device/google/marlin/preloads_copy.sh:system/bin/preloads_copy.sh
-
-PRODUCT_PACKAGES_DEBUG += \
-    update_engine_client
 
 # A/B updater updatable partitions list. Keep in sync with the partition list
 # with "_a" and "_b" variants in the device. Note that the vendor can add more
