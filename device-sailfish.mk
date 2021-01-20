@@ -75,3 +75,7 @@ $(call add-product-sanitizer-module-config,mm-camera,never)
 $(call add-product-sanitizer-module-config,myftm,never)
 $(call add-product-sanitizer-module-config,libqcril,never)
 $(call add-product-sanitizer-module-config,hostapd,never)
+
+PRODUCT_COPY_FILES += \
+    vendor/google/sailfish/proprietary/lib64/vendor.qti.atcmdfwd@1.0.so:vendor/lib64/vendor.qti.atcmdfwd@1.0.so:qcom \
+    vendor/google/sailfish/proprietary/lib64/vendor.qti.qcril.am@1.0.so:vendor/lib64/vendor.qti.qcril.am@1.0.so:qcom
