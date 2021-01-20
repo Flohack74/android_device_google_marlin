@@ -69,7 +69,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, device/google/marlin/common/common64.mk)
 
 #Android EGL implementation
-PRODUCT_PACKAGES += libGLES_android
 PRODUCT_PACKAGES += SSRestartDetector
 
 # graphics
