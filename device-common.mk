@@ -648,6 +648,8 @@ PRODUCT_PACKAGES += \
 
 # Ubuntu Touch
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/ubuntu/network/main.conf:system/halium/etc/ofono/main.conf \
+    $(LOCAL_PATH)/ubuntu/network/ril_subscription.conf:system/halium/etc/ofono/ril_subscription.conf \
     $(LOCAL_PATH)/ubuntu/70-marlin.rules:system/halium/lib/udev/rules.d/70-android.rules \
     $(LOCAL_PATH)/ubuntu/display.conf:system/halium/etc/ubuntu-touch-session.d/android.conf \
     $(LOCAL_PATH)/ubuntu/config-default.xml:system/halium/usr/share/powerd/device_configs/config-default.xml
