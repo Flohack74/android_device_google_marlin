@@ -652,4 +652,28 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/network/ril_subscription.conf:system/halium/etc/ofono/ril_subscription.conf \
     $(LOCAL_PATH)/ubuntu/70-marlin.rules:system/halium/lib/udev/rules.d/70-android.rules \
     $(LOCAL_PATH)/ubuntu/display.conf:system/halium/etc/ubuntu-touch-session.d/android.conf \
-    $(LOCAL_PATH)/ubuntu/config-default.xml:system/halium/usr/share/powerd/device_configs/config-default.xml
+    $(LOCAL_PATH)/ubuntu/config-default.xml:system/halium/usr/share/powerd/device_configs/config-default.xml \
+    $(LOCAL_PATH)/ubuntu/system/on-post-fs-data.rc:system/etc/init/on-post-fs-data.rc \
+    $(LOCAL_PATH)/ubuntu/system/on-post-fs-data.sh:system/bin/on-post-fs-data.sh
+
+# Ubuntu Touch additional packages
+
+PRODUCT_PACKAGES += \
+    strace \
+    libminisf \
+    libnetutils \
+    rild \
+    android.hardware.radio@1.0 \
+    android.hardware.contexthub@1.0 \
+    android.hardware.media.omx@1.0-service \
+    android.hardware.bluetooth@1.0 \
+    android.hardware.bluetooth.a2dp@1.0
+
+PRODUCT_COPY_FILES += \
+    device/google/marlin/seccomp_policy/crash_dump.arm.policy:system/etc/seccomp_policy/crash_dump.arm.policy
+
+# Kernel Modules Config
+PRODUCT_COPY_FILES += \
+    device/google/marlin/ubuntu/system/init.insmod.sh:vendor/bin/init.insmod.sh \
+    device/google/marlin/ubuntu/system/init.insmod.cfg:vendor/etc/init.insmod.cfg \
+    device/google/marlin/ubuntu/system/init.insmod_charger.cfg:vendor/etc/init.insmod_charger.cfg
