@@ -165,7 +165,7 @@
             <item>3000</item>
             <item>5000</item>
             <item>10000</item>
-</integer-array>
+    </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
          in the config_autoBrightnessLevels array.  This array should have size one greater
@@ -186,8 +186,6 @@
             <item>234</item>  <!-- 5000-10000 -->
             <item>255</item>  <!-- 10000+ -->
     </integer-array>
-
-
 
     <!-- MMS user agent string -->
     <string name="config_mms_user_agent" translatable="false">Android-Mms/2.0</string>
@@ -250,5 +248,4 @@
     <bool name="config_enableMultiUserUI">true</bool>
 
 </resources>
-
 
