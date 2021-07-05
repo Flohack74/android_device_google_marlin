@@ -1,6 +1,11 @@
 [
   {
-    "repository": "android_kernel_google_marlin",
+    "remote":      "aosp",
+    "repository":  "device/google/contexthub",
+    "target_path": "device/google/contexthub"
+  },
+  {
+    "repository":  "android_kernel_google_marlin",
     "target_path": "kernel/google/marlin"
   }
 ]
